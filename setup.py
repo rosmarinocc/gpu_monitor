@@ -1,18 +1,21 @@
+# setup.py
+
 from setuptools import setup, find_packages
 
 setup(
     name='gpu_monitor',
-    version='1.1',
+    version='2.0',
     packages=find_packages(),
     py_modules=['gpu_monitor'],
     entry_points={
         'console_scripts': [
-            'gpu_monitor=gpu_monitor.gpu_monitor:main',
+            'gpu_monitor = gpu_monitor.main:main',
         ],
     },
     install_requires=[
         'fire',
     ],
+    include_package_data=True,
     author='rosmarinocc',
     author_email='377704784@qq.com',
     description='A tool to monitor GPU usage and send email notifications.',
