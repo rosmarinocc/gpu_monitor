@@ -11,7 +11,6 @@ from gpu_monitor.config import CONFIG_FILE, LOG_FILE, PID_FILE
 logger = logging.getLogger(__name__)
 
 def daemonize(func):
-    read_config()
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         pid = os.fork()
