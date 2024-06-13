@@ -17,7 +17,7 @@ class EmailSender:
             self.from_addr = config['FROM_ADDR']
             self.password = config['FROM_SMTP_PASSWD']
             self.to_addr = config['TO_ADDR']
-            self.smtp_server = config['SMTP_SERVER']
+            self.smtp_server = 'smtp.qq.com'
         except Exception as e:
             logger.error(f"Error initializing EmailSender: {e}")
             sys.exit(1)

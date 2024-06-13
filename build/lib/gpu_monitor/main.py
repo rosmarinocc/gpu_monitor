@@ -48,12 +48,10 @@ def monitor(no: int):
     
 
 def configure():
-    
     from_addr = input("Please enter FROM_ADDR (your email address): ")
     smtp_passwd = input("Please enter SMTP_PASSWD (your email password): ")
-    smtp_server = input("Please enter SMTP_SERVER (SMTP server address): ")
     to_addr = input("Please enter TO_ADDR (recipient's email address): ")
-    write_config(from_addr, smtp_passwd, smtp_server,to_addr)
+    write_config(from_addr, smtp_passwd, to_addr)
     print("Configuration saved successfully.")
 
 def help():
