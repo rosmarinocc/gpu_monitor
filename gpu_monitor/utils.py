@@ -60,11 +60,12 @@ def read_config():
         return None
     
 
-def write_config(from_addr, smtp_passwd, to_addr):
+def write_config(from_addr, smtp_passwd, smtp_server,to_addr):
     config = configparser.ConfigParser()
     config['EMAIL'] = {
         'FROM_ADDR': from_addr,
         'FROM_SMTP_PASSWD': smtp_passwd,
+        'SMTP_SERVER':smtp_server,
         'TO_ADDR': to_addr
     }
     os.makedirs(os.path.dirname(CONFIG_FILE), exist_ok=True)
